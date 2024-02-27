@@ -12,7 +12,6 @@ import WeakSignalSvg from "../../assets/svg/weak-signal.svg";
 library.add(fas, faTwitter, faFontAwesome);
 
 const KanbanIcon = ({ type, value, fontSize = "12px" }) => {
-  console.log(type, value, fontSize, "KanbanIcon");
   const { STATUS, USER, PRIORITY } = GROUPING_OPTIONS;
   const icons = {
     status: {

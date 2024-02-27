@@ -5,7 +5,6 @@ import {
 } from "../config";
 
 export const getGroupedTicketByType = (ticketsData, groupType, sortType) => {
-  console.log(ticketsData, "tickets in groupedby");
   const { STATUS, USER, PRIORITY } = GROUPING_OPTIONS;
   const { TITLE, PRIORITY: SORTING_PRIORITY } = SORTING_OPTONS;
   const { tickets, users } = ticketsData;
@@ -51,8 +50,6 @@ export const getGroupedTicketByType = (ticketsData, groupType, sortType) => {
 
   const sortedGroupedTickets = { ...grouped };
 
-  console.log(grouped, "GROUPED");
-
   // If both groupType and sortType are priority, sort by descending order of priority
   if (groupType === PRIORITY && sortType === SORTING_PRIORITY) {
     const sortedData = {};
@@ -86,7 +83,6 @@ export const createDropdownOptions = (data) => {
 };
 
 export const getColumnLabel = (groupingOption, groupKey, ticketsData) => {
-  console.log(groupingOption, groupKey, ticketsData, "COlumnLabel");
   const { USER, PRIORITY } = GROUPING_OPTIONS;
   switch (groupingOption) {
     case USER:

@@ -9,7 +9,6 @@ import LocalStorageManager from "./utils/LocalStorageManager";
 
 const savedViewState = LocalStorageManager.getSavedViewState();
 const { groupingOption, sortingOption } = savedViewState || {};
-console.log(savedViewState, "savedViewState");
 
 const defaultSortingOption = sortingOption || SORTING_OPTONS.PRIORITY;
 const defaultGroupingOption = groupingOption || GROUPING_OPTIONS.USER;
